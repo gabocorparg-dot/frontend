@@ -1,0 +1,158 @@
+:root {
+  --color1: #622739;
+  --color2: #8c3953;
+  --color3: #c75776;
+  --color4: #ff8aa8;
+  --color5: #ffc5e3;
+
+  --nav-bg: #5b1a2f;
+  --nav-hover: #7d2a42;
+  --nav-accent: #f4c6d3;
+  --nav-text: #fff8f9;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: var(--color1);
+  background: linear-gradient(135deg,
+    var(--color1) 0%,
+    var(--color2) 20%,
+    var(--color3) 50%,
+    var(--color4) 75%,
+    var(--color5) 100%
+  );
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 12px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.logo-container {
+  width: 58px;
+  height: 58px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+.nav-logo { width: 45px; height: 45px; object-fit: contain; }
+.nav-left { display:flex; align-items:center; gap:15px; }
+.nav-title { font-weight:bold; font-size:1.15em; color:var(--nav-accent); }
+.nav-links { display:flex; align-items:center; gap:16px; }
+.nav-btn {
+  background: var(--nav-accent);
+  color: var(--nav-bg);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.nav-btn:hover { background: var(--nav-hover); color: var(--nav-text); }
+
+/* DROPDOWN */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn {
+  background: var(--nav-hover); color: var(--nav-text); padding: 8px 14px;
+  border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+.dropdown-content { display:none; position:absolute; right:0; background:white; color:var(--color1);
+  min-width:180px; box-shadow:0 8px 16px rgba(0,0,0,0.2); border-radius:6px; overflow:hidden; z-index:50;
+}
+.dropdown-content a { display:block; padding:10px 14px; text-decoration:none; color:var(--color1); }
+.dropdown-content a:hover { background:var(--color5); }
+.dropdown:hover .dropdown-content { display:block; }
+
+/* LAYOUT LOGIN */
+#container { display:flex; height: calc(100vh - 74px); }
+#info-institucion { flex:1.1; background:white; display:flex; align-items:center; justify-content:center; padding:40px; box-shadow: inset -5px 0 15px rgba(0,0,0,0.06);}
+.info-content { text-align:justify; max-width:700px; }
+.foto-escuela { width:100%; max-height:420px; object-fit:cover; border-radius:12px; margin-bottom:20px; }
+
+/* LOGIN SECTION */
+#login-section { flex:1; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, var(--color1), var(--color3), var(--color5)); }
+.card { background:white; padding:36px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.18); width:420px; text-align:center; }
+.logo { width:140px; margin-bottom:18px; }
+h2 { color: var(--color1); margin: 8px 0; }
+h3 { color: var(--color2); margin-bottom: 18px; font-weight:500; }
+input { width:90%; padding:12px; margin:10px 0; border-radius:6px; border:2px solid var(--color3); font-size:1em; }
+button { background: var(--color3); color: white; padding:12px 22px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+button:hover { background: var(--color2); }
+#login-error { color:#b00000; margin-top:8px; }
+
+/* PANEL ALUMNO / PROF / ADMIN base */
+.panel-alumno-bg { background: white; min-height: 100vh; display:flex; flex-direction:column; }
+.panel-alumno {
+  width: 96%; max-width:1400px; margin:36px auto; background:#fff; border-radius:18px;
+  border:3px solid #f7cad4; box-shadow:0 0 25px rgba(0,0,0,0.08); padding:36px 48px;
+}
+
+/* Tabs */
+.tabs { display:flex; justify-content:center; gap:12px; margin-bottom:22px; }
+.tab-btn { background:var(--color2); color:white; border:none; padding:10px 20px; border-radius:10px; cursor:pointer; font-weight:600; }
+.tab-btn:hover { background:var(--color3); } .tab-btn.active { background:var(--color3); box-shadow:0 0 10px rgba(0,0,0,0.12); }
+.tab-content { display:none; } .tab-content.active { display:block; }
+
+/* Boletín table */
+.boletin-container { overflow-x:auto; margin-bottom:18px; }
+table { width:100%; border-collapse:separate; border-spacing:0; border:2px solid #e0a9b9; border-radius:14px; overflow:hidden; font-size:1.05em; background:white; }
+th { background: var(--color2); color:white; padding:12px 8px; font-size:0.95em; border-right:1px solid var(--color3); text-transform:uppercase; }
+td { padding:10px 8px; text-align:center; border-top:1px solid #f2c5d2; border-right:1px solid #f2c5d2; min-width:120px; }
+td:first-child { text-align:left; padding-left:16px; font-weight:700; color:var(--color1); }
+tr:nth-child(even) td { background:#fff4f8; }
+tr:hover td { background:#ffe8f0; transition:0.18s; }
+
+/* rounded corners for table */
+th:first-child { border-top-left-radius:14px; } th:last-child { border-top-right-radius:14px; }
+tr:last-child td:first-child { border-bottom-left-radius:14px; } tr:last-child td:last-child { border-bottom-right-radius:14px; }
+
+/* Mis datos form */
+.datos-form { display:flex; flex-direction:column; gap:18px; width:100%; max-width:500px; background:#fff4f8; padding:30px 40px; border-radius:16px; border:2px solid #f7cad4; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+.datos-form label { font-weight:600; color:var(--color1); }
+.datos-form input { padding:12px; border:2px solid var(--color3); border-radius:8px; font-size:1em; background:white; width:100%; }
+.datos-form button { align-self:center; background:var(--color3); color:white; border:none; border-radius:8px; padding:12px 25px; font-weight:bold; cursor:pointer; margin-top:10px; }
+
+/* PROFESOR layout */
+.prof-section { display:flex; gap:20px; align-items:flex-start; }
+.search-panel { width:30%; background:#fff4f8; padding:14px; border-radius:12px; border:2px solid #f7cad4; min-height:280px; }
+.lista-alumnos { max-height:420px; overflow:auto; margin-top:8px; }
+.lista-item { padding:10px; border-bottom:1px dashed #f2c5d2; cursor:pointer; }
+.lista-item:hover { background:#ffe8f0; }
+.prof-boletin { flex:1; }
+
+/* Admin layout */
+.admin-grid { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:18px; margin-top:12px; }
+.admin-card { background:#fff4f8; padding:14px; border-radius:12px; border:2px solid #f7cad4; min-height:220px; overflow:auto; }
+.admin-user-item { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed #f2c5d2; }
+.admin-user-actions button { margin-left:8px; }
+.badge { background:var(--color3); color:white; padding:4px 8px; border-radius:8px; font-size:0.8em; margin-left:8px; }
+
+/* small helpers */
+.muted { color:#6b4b52; font-size:0.9em; }
+.btn-edit, .btn-boletin { background:var(--color2); color:white; border:none; padding:6px 10px; border-radius:8px; cursor:pointer; }
+.btn-edit:hover, .btn-boletin:hover { background:var(--color3); }
+
+/* Responsive */
+@media (max-width:1100px) {
+  #container { flex-direction:column; height:auto; }
+  #info-institucion, #login-section { width:100%; flex:none; box-shadow:none; }
+  .panel-alumno { width:96%; padding:18px; margin:20px auto; }
+  .nav-links { gap:10px; }
+  .dropdown-content { right:-10px; }
+  table th, table td { padding:8px 6px; min-width:96px; }
+  .prof-section { flex-direction:column; }
+  .search-panel { width:100%; }
+  .admin-grid { grid-template-columns: 1fr; }
+}

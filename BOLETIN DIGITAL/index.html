@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boletín Digital - Colegio Ernesto Guevara</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-container">
+        <img src="recursos/logo.png" alt="Logo Colegio" class="nav-logo">
+      </div>
+      <span class="nav-title">Colegio Prov. Dr. Ernesto Guevara</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="https://secundario.aulasdigitales.tdf.gob.ar/" target="_blank" class="nav-btn">AULAS DIGITALES</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">INFORMACIÓN ▾</button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/@colegioprovincialdrernesto1731" target="_blank">YouTube</a>
+          <a href="https://www.facebook.com/colegioguevara/?locale=es_LA" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <div id="container">
+    <!-- SECCIÓN IZQUIERDA -->
+    <section id="info-institucion">
+      <div class="info-content">
+        <img src="recursos/escuelafoto.jpeg" alt="Foto de la escuela" class="foto-escuela">
+        <p>
+          En esta institución buscamos mejorar y facilitar el ámbito estudiantil de todos los alumnos.
+          Por eso brindamos esta facilidad a los estudiantes para poder acceder a sus notas y datos
+          estudiantiles de manera fácil y rápida. Nuestra meta es fortalecer el vínculo entre la escuela,
+          los docentes y los alumnos, promoviendo la transparencia y la accesibilidad de la información
+          académica, fomentando así una comunidad educativa más integrada y moderna.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DERECHA (LOGIN) -->
+    <section id="login-section">
+      <div id="login-view" class="card">
+        <img src="recursos/logo.png" alt="Logo Colegio" class="logo">
+        <h2>Boletín Digital</h2>
+        <h3>Colegio Prov. Dr. Ernesto Guevara</h3>
+        <input type="email" id="email" placeholder="Correo electrónico" />
+        <input type="password" id="password" placeholder="Contraseña" />
+        <button id="login-btn">Ingresar</button>
+        <p id="login-error"></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

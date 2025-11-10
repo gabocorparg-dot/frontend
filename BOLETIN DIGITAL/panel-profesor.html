@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Profesor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo-container">
+      <img src="recursos/user.png" class="nav-logo">
+    </div>
+    <span id="user-name-prof" class="nav-title">Profesor</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="https://secundario.aulasdigitales.tdf.gob.ar/my/" target="_blank" class="nav-btn">AULAS DIGITALES</a>
+    <button id="logout-btn-prof" class="nav-btn logout-btn">Cerrar sesión</button>
+  </nav>
+</header>
+
+<main class="fullscreen-section">
+
+  <h2>Panel del Profesor</h2>
+
+  <div class="prof-container">
+
+    <div class="search-panel">
+      <input id="buscar-alumno" placeholder="Buscar alumno...">
+      <div id="lista-alumnos"></div>
+    </div>
+
+    <div class="boletin-panel">
+      <h3 id="prof-alumno-nombre">Seleccione un alumno</h3>
+
+      <table id="prof-boletin-excel">
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>1er Inf</th>
+            <th>2do Inf</th>
+            <th>1er Cuat</th>
+            <th>1er Inf 2C</th>
+            <th>2do Inf 2C</th>
+            <th>2do Cuat</th>
+            <th>Rec Dic</th>
+            <th>Rec Feb</th>
+            <th>Nota Final</th>
+          </tr>
+        </thead>
+        <tbody id="prof-boletin-body"></tbody>
+      </table>
+
+      <button id="guardar-boletin-prof" class="save-btn">Guardar</button>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+

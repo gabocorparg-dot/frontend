@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Alumno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo-container">
+      <img src="recursos/user.png" alt="User" class="nav-logo">
+    </div>
+    <span id="user-name" class="nav-title">Alumno</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="https://secundario.aulasdigitales.tdf.gob.ar/my/" target="_blank" class="nav-btn">AULAS DIGITALES</a>
+    <button id="logout-btn" class="nav-btn logout-btn">Cerrar sesión</button>
+  </nav>
+</header>
+
+<main class="fullscreen-section">
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="boletin">🧾 Boletín</button>
+    <button class="tab-btn" data-tab="datos">👤 Mis Datos</button>
+  </div>
+
+  <section id="boletin" class="tab-content active">
+    <table id="boletin-excel">
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>1er Inf</th>
+          <th>2do Inf</th>
+          <th>1er Cuat</th>
+          <th>1er Inf 2C</th>
+          <th>2do Inf 2C</th>
+          <th>2do Cuat</th>
+          <th>Rec Dic</th>
+          <th>Rec Feb</th>
+          <th>Nota Final</th>
+        </tr>
+      </thead>
+      <tbody id="boletin-body"></tbody>
+    </table>
+  </section>
+
+  <section id="datos" class="tab-content">
+    <form class="datos-form" onsubmit="return false;">
+
+      <label>Nombre:</label>
+      <input id="nombre-usuario">
+
+      <label>Email:</label>
+      <input id="correo-usuario">
+
+      <label>Clave:</label>
+      <input id="clave-usuario" type="password">
+
+      <button id="guardar-datos">Guardar</button>
+    </form>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

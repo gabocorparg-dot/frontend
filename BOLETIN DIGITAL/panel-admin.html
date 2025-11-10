@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo-container">
+      <img src="recursos/user.png" class="nav-logo">
+    </div>
+    <span id="user-name-admin" class="nav-title">Administrador</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="https://secundario.aulasdigitales.tdf.gob.ar/my/" target="_blank" class="nav-btn">AULAS DIGITALES</a>
+    <button id="logout-btn-admin" class="nav-btn logout-btn">Cerrar sesión</button>
+  </nav>
+</header>
+
+<main class="fullscreen-section">
+
+  <h2>Panel del Administrador</h2>
+
+  <div class="admin-grid">
+
+    <div class="admin-card">
+      <h3>Usuarios</h3>
+      <div id="admin-user-list"></div>
+      <button id="btn-nuevo-usuario">Nuevo usuario</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Editar Usuario</h3>
+      <form onsubmit="return false;">
+
+        <label>Nombre:</label>
+        <input id="admin-nombre">
+
+        <label>Email:</label>
+        <input id="admin-email">
+
+        <label>Clave:</label>
+        <input id="admin-password">
+
+        <label>Rol:</label>
+        <select id="admin-rol">
+          <option value="alumno">Alumno</option>
+          <option value="profesor">Profesor</option>
+          <option value="admin">Administrador</option>
+        </select>
+
+        <button id="admin-guardar">Guardar</button>
+        <button id="admin-eliminar" style="background:#c0392b;">Eliminar</button>
+      </form>
+    </div>
+
+    <div class="admin-card">
+      <h3>Boletín del Usuario</h3>
+
+      <table id="admin-boletin-excel">
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>1er Inf</th>
+            <th>2do Inf</th>
+            <th>1er Cuat</th>
+            <th>1er Inf 2C</th>
+            <th>2do Inf 2C</th>
+            <th>2do Cuat</th>
+            <th>Rec Dic</th>
+            <th>Rec Feb</th>
+            <th>Nota Final</th>
+          </tr>
+        </thead>
+        <tbody id="admin-boletin-body"></tbody>
+      </table>
+
+      <button id="admin-guardar-boletin" class="save-btn">Guardar boletín</button>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
